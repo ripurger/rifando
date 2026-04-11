@@ -1,11 +1,8 @@
 "use client"; // Precisamos de interação (clique)
-import { useState, useEffect } from 'react';
-import { createClient } from '../../../utils/supabase/client';
+import { useState } from 'react';
 
-export default function RifaDetalhes({ params }: { params: { id: string } }) {
+export default function RifaDetalhes() {
   const [selectedNumbers, setSelectedNumbers] = useState<number[]>([]);
-  const [raffle, setRaffle] = useState<any>(null);
-  const supabase = createClient();
 
   // Função para selecionar/desmarcar número
   const toggleNumber = (num: number) => {
